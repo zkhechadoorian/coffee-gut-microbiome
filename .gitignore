@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (keep raw data out of git if large)
+data/raw/*.tsv
+
+# OS
+.DS_Store
