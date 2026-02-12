@@ -261,4 +261,4 @@ def download_agp_sample(n_samples: int = 1000, use_auth: bool = True):
     print("="*70 + "\n")
 
 if __name__ == "__main__":
-    download_agp_sample(n_samples=1000)
+    download_agp_sample(n_samples=5000)
