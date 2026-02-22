@@ -1,34 +1,35 @@
 # Coffee Consumption and the Gut Microbiome
 
 This project investigates whether coffee consumption is associated with
-differences in gut microbiome composition using data from the American Gut Project.
+differences in gut microbiome composition using data from the ZOE PREDICT1 study. 
+My goal is to reproduce the findings mentioned in the following research paper:
+https://www.nature.com/articles/s41564-024-01858-9. 
 
 ## Research Question
 Do coffee drinkers exhibit differences in gut microbiome diversity or
 specific bacterial taxa compared to non-coffee drinkers?
 
-## Dataset
-- American Gut Project (16S rRNA sequencing)
-- Public feature tables, taxonomy, and metadata
+## Dataset: ZOE PREDICT1 ✅
 
-The American Gut Project data was obtained from [Qiita](https://qiita.ucsd.edu/), Study ID 10317.
+This dataset is hosted at the following URL:
+https://www.ebi.ac.uk/ena/browser/view/PRJEB39223?show=reads
 
-**Files downloaded:**
-- `feature-table.tsv` - OTU/ASV abundance matrix (features × samples)
-- `metadata.tsv` - Sample metadata including dietary and lifestyle information
-- `taxonomy.tsv` - Taxonomic assignments for each feature
+However, for the purposes of my study, I chose to download the supplementary data 
+provided in the Nature Medicine article. More information is summarized below.
 
-**Download steps:**
-1. Create an account at https://qiita.ucsd.edu/
-2. Navigate to Study 10317 (American Gut Project)
-3. Access the study's processed data artifacts
-4. Download the BIOM table and convert to TSV format, or download pre-processed TSV files
-5. Download the sample information file (metadata)
-6. Download the taxonomy assignments
+**Source:** Nature Medicine supplementary data  
+**Paper:** "Microbiome connections with host metabolism and habitual diet from 1,098 deeply phenotyped individuals"  
+**DOI:** 10.1038/s41591-020-01183-8  
+**ENA Project:** PRJEB39223
 
-Place all downloaded files in the `data/raw/` directory.
+### Data Downloaded:
+- ✅ Supplementary Excel file (.xlsx) from Nature Medicine
+- Contains processed microbiome and dietary data
+- ~1,000 participants with detailed coffee consumption data
 
-
+**Files:**
+- Place the downloaded `.xlsx` file in `data/raw/`
+- Will be processed to extract microbiome abundance tables and metadata
 
 ## Project Structure
 - `data/` – raw and processed data
@@ -38,10 +39,13 @@ Place all downloaded files in the `data/raw/` directory.
 
 ## Methods (Planned)
 - Data quality control
-- Metadata curation (coffee consumption definition)
+- Coffee consumption categorization  
 - Alpha and beta diversity analysis
 - Differential abundance testing
 
+## References
+- Asnicar et al. (2021) Nature Medicine - DOI: 10.1038/s41591-020-01183-8
+- Berry et al. (2020) Nature Medicine - DOI: 10.1038/s41591-020-0934-0
+
 ## Notes
 This is an exploratory, observational analysis and does not imply causation.
-
