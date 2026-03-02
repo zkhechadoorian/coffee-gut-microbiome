@@ -9,8 +9,9 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Data (keep raw data out of git if large)
-data/raw/*.tsv
-data/processed/*.tsv
+data/
+data/raw/*
+data/processed/*
 
 # OS
 .DS_Store
